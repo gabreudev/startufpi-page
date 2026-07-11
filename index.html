@@ -13,29 +13,22 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#" class="nav__logo">
-        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
-          <defs>
-            <linearGradient id="logoG" x1="0" y1="0" x2="36" y2="36">
-              <stop stop-color="#8b5cf6"/>
-              <stop offset="1" stop-color="#d946ef"/>
-            </linearGradient>
-          </defs>
-          <path d="M18 4 L22 16 L26 14 L18 32 L14 20 L10 22 Z" fill="url(#logoG)"/>
-          <circle cx="18" cy="8" r="3" fill="url(#logoG)" opacity=".6"/>
-        </svg>
-        START<span class="nav__logo-accent">UFPI</span>
+        <img src="logo.png" alt="StartUFPI" class="nav__logo-img">
       </a>
       <ul class="nav__links" id="navLinks">
         <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#ods">ODS</a></li>
-        <li><a href="#mentores">Mentores</a></li>
+        <li><a href="#equipe">Equipe</a></li>
         <li><a href="#agenda">Agenda</a></li>
         <li><a href="#premios">Prêmios</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
       </ul>
       <div class="nav__right">
         <button class="nav__lang" aria-label="Alterar Idioma">
-          🌐 PT
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          PT
         </button>
         <a href="https://forms.gle/cpAK4ZdNrELUDbUH7" target="_blank" class="btn-pill btn-pill--primary">Inscreva-se</a>
       </div>
@@ -55,7 +48,7 @@
       <div class="hero__grid">
         <div class="hero__content">
           <div class="badge-tag">
-            <span class="badge-tag__dot"></span>
+            <span></span>
             Desafio de Inovação & Tecnologia 2026
           </div>
           <h1>Desafio StartUFPI <span class="gradient-text">Conecte & Prototipe</span></h1>
@@ -73,17 +66,6 @@
             <div class="capsule capsule--sub">
               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=300&q=80" alt="Jovem desenvolvedor na universidade">
             </div>
-            <div class="attendee-badge">
-              <div class="attendee-avatars">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&q=80" alt="Participante 1">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&q=80" alt="Participante 2">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&q=80" alt="Participante 3">
-              </div>
-              <div class="attendee-text">
-                +500 Acadêmicos
-                <span>Inscritos no desafio</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -99,22 +81,48 @@
       </div>
       <div class="why-grid">
         <div class="why-card">
-          <div class="why-card__icon">💡</div>
+          <div class="why-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1 .3 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+              <path d="M9 18h6"/>
+              <path d="M10 22h4"/>
+            </svg>
+          </div>
           <h3>Ideação & Modelagem</h3>
           <p>Aprenda a estruturar sua ideia de negócio utilizando as ferramentas mais modernas de Design Thinking.</p>
         </div>
         <div class="why-card">
-          <div class="why-card__icon">🤝</div>
+          <div class="why-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
           <h3>Mentorias Práticas</h3>
           <p>Feedback constante de profissionais do ecossistema de startups e pesquisadores da universidade.</p>
         </div>
         <div class="why-card">
-          <div class="why-card__icon">🚀</div>
+          <div class="why-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
           <h3>Bolsas de Fomento</h3>
           <p>Auxílio financeiro direto para desenvolvimento e validação do protótipo de sua equipe.</p>
         </div>
         <div class="why-card">
-          <div class="why-card__icon">🏆</div>
+          <div class="why-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+              <path d="M4 22h16"/>
+              <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"/>
+              <path d="M12 2a4 4 0 0 1 4 4v7a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/>
+            </svg>
+          </div>
           <h3>Aceleração Direta</h3>
           <p>Equipes vencedoras garantem vaga direta em programas locais de incubação e aceleração.</p>
         </div>
@@ -122,73 +130,202 @@
     </div>
   </section>
 
-  <!-- SEÇÃO 3: MENTORES -->
-  <section id="mentores">
+  <!-- SEÇÃO 3: EQUIPE -->
+  <section id="equipe">
     <div class="container">
       <div class="section-header">
-        <div class="badge-tag">Nosso Ecossistema</div>
-        <h2>Aprenda com Especialistas</h2>
+        <div class="badge-tag">Quem Faz Acontecer</div>
+        <h2>Equipe StartUFPI 2026</h2>
       </div>
-      <div class="speakers-grid">
-        <!-- Mentor 1 -->
-        <div class="speaker-card">
-          <div class="speaker-card__img">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=350&q=80" alt="Mentor Thiago Carvalho">
-          </div>
-          <div class="speaker-card__info">
-            <div class="speaker-card__details">
-              <h4>Thiago Carvalho</h4>
-              <p>Inovação & Venture Capital</p>
+
+      <!-- Topo: Liderança & Coordenação -->
+      <div class="team-group">
+        <div class="team-group__title">Liderança & Coordenação</div>
+        <div class="team-grid-3">
+          <!-- Rodrigo Veras -->
+          <div class="speaker-card">
+            <div class="speaker-card__img">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=350&q=80" alt="Rodrigo Veras">
             </div>
-            <div class="speaker-card__socials">
-              <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <div class="speaker-card__info">
+              <div class="speaker-card__details">
+                <h4>Rodrigo Veras</h4>
+                <p>Pró-Reitor de Pesquisa e Inovação da UFPI</p>
+              </div>
+              <div class="speaker-card__socials">
+                <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <!-- Elayne Figueiredo -->
+          <div class="speaker-card">
+            <div class="speaker-card__img">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=350&q=80" alt="Elayne Figueiredo">
+            </div>
+            <div class="speaker-card__info">
+              <div class="speaker-card__details">
+                <h4>Elayne Figueiredo</h4>
+                <p>Gerente de Inovação da PROPESQI</p>
+              </div>
+              <div class="speaker-card__socials">
+                <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <!-- Albemerc Moraes -->
+          <div class="speaker-card">
+            <div class="speaker-card__img">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=350&q=80" alt="Albemerc Moraes">
+            </div>
+            <div class="speaker-card__info">
+              <div class="speaker-card__details">
+                <h4>Albemerc Moraes</h4>
+                <p>Coordenador do NINTEC/UFPI</p>
+              </div>
+              <div class="speaker-card__socials">
+                <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Mentor 2 -->
-        <div class="speaker-card">
-          <div class="speaker-card__img">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=350&q=80" alt="Mentora Amanda Costa">
-          </div>
-          <div class="speaker-card__info">
-            <div class="speaker-card__details">
-              <h4>Amanda Costa</h4>
-              <p>UX/UI Specialist & Product</p>
+      </div>
+
+      <!-- Segundo: Tutores -->
+      <div class="team-group">
+        <div class="team-group__title">Tutores</div>
+        <div class="team-grid-2">
+          <!-- Valdivânia -->
+          <div class="speaker-card">
+            <div class="speaker-card__img">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=350&q=80" alt="Valdivânia">
             </div>
-            <div class="speaker-card__socials">
-              <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <div class="speaker-card__info">
+              <div class="speaker-card__details">
+                <h4>Valdivânia</h4>
+                <p>Tutora de Projetos</p>
+              </div>
+              <div class="speaker-card__socials">
+                <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+              </div>
+            </div>
+          </div>
+          <!-- Leonardo Pio -->
+          <div class="speaker-card">
+            <div class="speaker-card__img">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=350&q=80" alt="Leonardo Pio">
+            </div>
+            <div class="speaker-card__info">
+              <div class="speaker-card__details">
+                <h4>Leonardo Pio</h4>
+                <p>Tutor de Projetos</p>
+              </div>
+              <div class="speaker-card__socials">
+                <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Mentor 3 -->
-        <div class="speaker-card">
-          <div class="speaker-card__img">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=350&q=80" alt="Mentor Prof. Dr. André Silva">
-          </div>
-          <div class="speaker-card__info">
-            <div class="speaker-card__details">
-              <h4>Prof. Dr. André Silva</h4>
-              <p>Pesquisa & Sustentabilidade</p>
+      </div>
+
+      <!-- Terceiro: Agentes de Inovação (Carrossel) -->
+      <div class="team-group">
+        <div class="team-group__title">Agentes de Inovação</div>
+        <div class="carousel-container">
+          <div class="carousel-viewport" id="inovacaoViewport">
+            <div class="carousel-track" id="inovacaoTrack">
+              <!-- Agente 1 - Weslley Silva -->
+              <div class="speaker-card">
+                <div class="speaker-card__img">
+                  <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" alt="Weslley Silva">
+                </div>
+                <div class="speaker-card__info">
+                  <div class="speaker-card__details">
+                    <h4>Weslley Silva</h4>
+                    <p>Discente do curso de Jornalismo - CCE</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Agente 2 - Lorena -->
+              <div class="speaker-card">
+                <div class="speaker-card__img">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Lorena">
+                </div>
+                <div class="speaker-card__info">
+                  <div class="speaker-card__details">
+                    <h4>Lorena</h4>
+                    <p>Discente do curso de Jornalismo - CCE</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Agente 3 - Carlos Heitor -->
+              <div class="speaker-card">
+                <div class="speaker-card__img">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" alt="Carlos Heitor">
+                </div>
+                <div class="speaker-card__info">
+                  <div class="speaker-card__details">
+                    <h4>Carlos Heitor</h4>
+                    <p>Discente do curso de Administração - UFPI</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Agente 4 - Maria Fernanda -->
+              <div class="speaker-card">
+                <div class="speaker-card__img">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Maria Fernanda">
+                </div>
+                <div class="speaker-card__info">
+                  <div class="speaker-card__details">
+                    <h4>Maria Fernanda</h4>
+                    <p>Discente do curso de Ciências Contábeis - UFPI</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Agente 5 - Andreza Larize -->
+              <div class="speaker-card">
+                <div class="speaker-card__img">
+                  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=300&q=80" alt="Andreza Larize">
+                </div>
+                <div class="speaker-card__info">
+                  <div class="speaker-card__details">
+                    <h4>Andreza Larize</h4>
+                    <p>Discente do curso de Engenharia Agronômica - UFPI</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Agente 6 - Amanda Medeiros -->
+              <div class="speaker-card">
+                <div class="speaker-card__img">
+                  <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=300&q=80" alt="Amanda Medeiros">
+                </div>
+                <div class="speaker-card__info">
+                  <div class="speaker-card__details">
+                    <h4>Amanda Medeiros</h4>
+                    <p>Discente do curso de Gestão de Dados - CEAD</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Agente 7 - Vinicius Nunes -->
+              <div class="speaker-card">
+                <div class="speaker-card__img">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Vinicius Nunes">
+                </div>
+                <div class="speaker-card__info">
+                  <div class="speaker-card__details">
+                    <h4>Vinicius Nunes</h4>
+                    <p>Discente do curso de Sistemas de Informação - UFPI</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="speaker-card__socials">
-              <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-            </div>
           </div>
-        </div>
-        <!-- Mentor 4 -->
-        <div class="speaker-card">
-          <div class="speaker-card__img">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=350&q=80" alt="Mentora Carla Rocha">
-          </div>
-          <div class="speaker-card__info">
-            <div class="speaker-card__details">
-              <h4>Carla Rocha</h4>
-              <p>Business Strategy & Pitch</p>
-            </div>
-            <div class="speaker-card__socials">
-              <a href="#" aria-label="LinkedIn"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-            </div>
-          </div>
+          <button class="carousel-btn carousel-btn--prev" id="inovacaoPrev" aria-label="Anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel-btn carousel-btn--next" id="inovacaoNext" aria-label="Próximo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <div class="carousel-dots" id="inovacaoDots"></div>
         </div>
       </div>
     </div>
@@ -329,7 +466,7 @@
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">UFPI</span>
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">PROPESQI</span>
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">LINC</span>
-        <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">SBC</span>
+        <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">GAAI</span>
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">CNPq</span>
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">FAPEPI</span>
       </div>
@@ -337,54 +474,9 @@
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">UFPI</span>
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">PROPESQI</span>
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">LINC</span>
-        <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">SBC</span>
+        <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">GAAI</span>
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">CNPq</span>
         <span style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: #fff; opacity: 0.5;">FAPEPI</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO 7: DEPOIMENTOS -->
-  <section id="depoimentos">
-    <div class="container">
-      <div class="section-header">
-        <div class="badge-tag">Depoimentos</div>
-        <h2>O que dizem os participantes</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-card__quote">“</div>
-          <p>O Desafio StartUFPI foi a ponte entre o laboratório de pesquisa e o ecossistema real de negócios. Aprendemos a modelar o valor real de nossa tecnologia.</p>
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="Mariana Silva">
-            <div>
-              <h4>Mariana Silva</h4>
-              <p>Mestranda em Biotecnologia</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-card__quote">“</div>
-          <p>O processo de mentoria nos desafiou a adaptar nosso protótipo de saneamento de água. O fomento recebido acelerou nossa validação prática.</p>
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80" alt="Lucas Lima">
-            <div>
-              <h4>Lucas Lima</h4>
-              <p>Graduando em Engenharia Civil</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-card__quote">“</div>
-          <p>Conseguir apoio regulatório e foco no desenvolvimento sustentável foi essencial para validarmos nosso software voltado a pequenos produtores agrícolas.</p>
-          <div class="testimonial-user">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Juliana Santos">
-            <div>
-              <h4>Juliana Santos</h4>
-              <p>Doutoranda em Agronomia</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -413,19 +505,14 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="#" class="nav__logo">
-            <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
-              <path d="M18 4 L22 16 L26 14 L18 32 L14 20 L10 22 Z" fill="url(#logoG)"/>
-              <circle cx="18" cy="8" r="3" fill="url(#logoG)" opacity=".6"/>
-            </svg>
-            START<span class="nav__logo-accent">UFPI</span>
+            <img src="logo2.png" alt="StartUFPI" class="nav__logo-img">
           </a>
           <p>A maior iniciativa de empreendedorismo, inovação e sustentabilidade acadêmica do Piauí.</p>
         </div>
         <div class="footer__col">
           <h5>Menu</h5>
           <a href="#sobre">Sobre</a>
-          <a href="#ods">ODS</a>
-          <a href="#mentores">Mentores</a>
+          <a href="#equipe">Equipe</a>
           <a href="#agenda">Agenda</a>
         </div>
         <div class="footer__col">
