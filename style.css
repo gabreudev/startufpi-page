@@ -135,8 +135,8 @@ body {
 }
 
 .header .nav__logo-img {
-  height: 58px;
-  margin-left: -4px;
+  height: 90px;
+  margin-left: -20px;
 }
 
 .nav__links {
@@ -458,54 +458,107 @@ section {
   letter-spacing: -0.01em;
 }
 
-/* ========== WHY JOIN (SECTION 2) ========== */
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.why-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 32px 24px;
-  transition: var(--transition);
-  backdrop-filter: blur(10px);
-}
-
-.why-card:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-color-hover);
-  transform: translateY(-8px);
-}
-
-.why-card__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-sm);
-  background: rgba(163, 230, 85, 0.15);
-  border: 1px solid rgba(163, 230, 85, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  color: var(--purple);
-  margin-bottom: 24px;
-}
-
-.why-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 12px;
-}
-
-.why-card p {
-  font-size: 0.875rem;
+.section-header__desc {
+  max-width: 720px;
+  margin: 20px auto 0;
+  font-size: 1rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
+}
+
+.section-header__desc strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ========== SOBRE (SECTION 2) ========== */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.sobre-content h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 16px 0 24px;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.sobre-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.sobre-content p strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.sobre-cta {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.sobre-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 4 / 3;
+}
+
+.sobre-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sobre-img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.sobre-img-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(7, 5, 13, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  pointer-events: none;
+}
+
+.sobre-img-badge svg {
+  color: var(--purple);
+  flex-shrink: 0;
 }
 
 /* ========== SPEAKERS (SECTION 3) ========== */
@@ -1121,7 +1174,9 @@ section {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
   .hero h1 { font-size: 2.8rem; }
-  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .sobre-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .sobre-cta { justify-content: center; }
+  .sobre-img-wrapper { max-width: 420px; margin: 0 auto; }
   .speakers-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid-3 { grid-template-columns: repeat(2, 1fr); max-width: 660px; }
   .carousel-track .speaker-card {
@@ -1171,6 +1226,10 @@ section {
   .hero__desc { margin: 0 auto 32px; }
   .hero__actions { justify-content: center; }
   .capsule-group { height: 360px; margin: 0 auto; }
+  .sobre-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .sobre-cta { justify-content: center; flex-wrap: wrap; }
+  .sobre-content h2 { font-size: 2rem; }
+  .sobre-img-wrapper { max-width: 380px; margin: 0 auto; }
   .capsule--main { width: 180px; height: 280px; left: 40px; }
   .capsule--sub { width: 120px; height: 180px; right: 40px; }
   
