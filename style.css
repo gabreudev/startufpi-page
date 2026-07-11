@@ -1171,22 +1171,58 @@ section {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* ========== RESPONSIVE ========== */
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+
+/* ---- TABLET (768px - 1024px) ---- */
 @media (max-width: 1024px) {
-  .hero h1 { font-size: 2.8rem; }
-  .sobre-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-  .sobre-cta { justify-content: center; }
-  .sobre-img-wrapper { max-width: 420px; margin: 0 auto; }
+  .hero {
+    padding: 160px 0 80px;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+  .hero__desc {
+    font-size: 1rem;
+  }
+
+  .section-header h2,
+  .sobre-content h2,
+  .agenda-left h2 {
+    font-size: 2.2rem;
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+  }
+  .sobre-img-wrapper {
+    max-width: 100%;
+  }
+
   .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+
   .team-grid-3 { grid-template-columns: repeat(2, 1fr); max-width: 660px; }
+
   .carousel-track .speaker-card {
     flex: 0 0 calc((100% - 24px) / 2);
   }
+
   .tickets-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
   .testimonials-grid { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; }
 }
 
+/* ---- MOBILE (< 768px) ---- */
 @media (max-width: 768px) {
+  /* Container */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* NAV - mobile menu */
   .nav__links { display: none; }
   .hamburger { display: flex; }
   
@@ -1221,35 +1257,338 @@ section {
   .nav__links.open a.active {
     background: rgba(255, 255, 255, 0.06);
   }
-  
-  .hero__grid { grid-template-columns: 1fr; text-align: center; }
-  .hero__desc { margin: 0 auto 32px; }
-  .hero__actions { justify-content: center; }
-  .capsule-group { height: 360px; margin: 0 auto; }
-  .sobre-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
-  .sobre-cta { justify-content: center; flex-wrap: wrap; }
-  .sobre-content h2 { font-size: 2rem; }
-  .sobre-img-wrapper { max-width: 380px; margin: 0 auto; }
-  .capsule--main { width: 180px; height: 280px; left: 40px; }
-  .capsule--sub { width: 120px; height: 180px; right: 40px; }
-  
-  .agenda-grid { grid-template-columns: 1fr; }
-  .agenda-left { position: static; }
-  .timeline { margin-left: 0; border-left: none; }
-  .timeline-item { flex-direction: column; padding-left: 20px; border-left: 1px dashed rgba(255,255,255,0.15); }
-  .timeline-time { position: static; text-align: left; margin-bottom: 8px; width: auto; }
-  .timeline-dot { left: -6px; }
-  
-  .team-grid-3 { grid-template-columns: 1fr; max-width: 350px; }
-  .team-grid-2 { grid-template-columns: 1fr; max-width: 350px; }
+
+  /* Header logo - smaller on mobile */
+  .header .nav__logo-img {
+    height: 64px;
+    margin-left: -12px;
+  }
+  .nav__right .btn-pill {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+  .nav__lang span {
+    display: none;
+  }
+
+  /* Sections - reduced padding */
+  section {
+    padding: 70px 0;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 140px 0 60px;
+  }
+  .hero__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero__desc {
+    font-size: 0.95rem;
+    margin: 0 auto 32px;
+    max-width: 100%;
+  }
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero__actions .btn-pill {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Capsules - smaller */
+  .capsule-group {
+    height: 280px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .capsule--main {
+    width: 160px;
+    height: 240px;
+    left: 20px;
+  }
+  .capsule--sub {
+    width: 110px;
+    height: 170px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  /* Section Headers */
+  .section-header {
+    margin-bottom: 40px;
+  }
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .section-header__desc {
+    font-size: 0.9rem;
+  }
+
+  /* SOBRE */
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: left;
+  }
+  .sobre-content h2 {
+    font-size: 1.8rem;
+  }
+  .sobre-content p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .sobre-cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sobre-cta .btn-pill {
+    width: 100%;
+    text-align: center;
+  }
+  .sobre-img-wrapper {
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+  }
+  .sobre-img-badge {
+    bottom: 12px;
+    left: 12px;
+    padding: 8px 14px;
+    font-size: 0.7rem;
+  }
+
+  /* TEAM */
+  .team-grid-3,
+  .team-grid-2 {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+  .team-group__title {
+    font-size: 0.75rem;
+  }
+  .team-group__title::before,
+  .team-group__title::after {
+    width: 30px;
+  }
+
+  /* Carousel */
   .carousel-track .speaker-card {
     flex: 0 0 100%;
   }
   .carousel-btn--prev { left: 4px; }
   .carousel-btn--next { right: 4px; }
-  
-  .footer__grid { grid-template-columns: 1fr; }
-  .footer__bottom { flex-direction: column; gap: 20px; text-align: center; }
+
+  /* AGENDA */
+  .agenda-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .agenda-left {
+    position: static;
+  }
+  .agenda-left h2 {
+    font-size: 1.8rem;
+  }
+  .agenda-left p {
+    max-width: 100%;
+  }
+  .agenda-left__img {
+    display: none;
+  }
+  .agenda-tabs {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .agenda-tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* Timeline */
+  .timeline {
+    margin-left: 0;
+    border-left: none;
+  }
+  .timeline-item {
+    flex-direction: column;
+    padding-left: 24px;
+    padding-bottom: 36px;
+    border-left: 1px dashed rgba(255,255,255,0.15);
+  }
+  .timeline-time {
+    position: static;
+    text-align: left;
+    margin-bottom: 8px;
+    width: auto;
+    font-size: 0.8rem;
+  }
+  .timeline-dot {
+    left: -6px;
+    top: 4px;
+    width: 11px;
+    height: 11px;
+  }
+  .timeline-content {
+    padding-left: 0;
+  }
+  .timeline-content h4 {
+    font-size: 1rem;
+  }
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+
+  /* TICKETS */
+  .tickets-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .ticket-card {
+    padding: 32px 24px;
+  }
+  .ticket-card__price {
+    font-size: 2.2rem;
+  }
+
+  /* MARQUEE */
+  .partners {
+    padding: 40px 0;
+  }
+  .marquee__content {
+    gap: 40px;
+  }
+  .marquee__content span {
+    font-size: 1rem !important;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 60px 0 32px;
+  }
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 40px;
+  }
+  .footer__brand p {
+    max-width: 100%;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  /* Gallery */
+  .gallery {
+    padding-bottom: 80px;
+  }
 }
 
+/* ---- SMALL PHONES (< 480px) ---- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
 
+  .hero {
+    padding: 120px 0 50px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero__desc {
+    font-size: 0.88rem;
+  }
+
+  .capsule-group {
+    height: 220px;
+    max-width: 260px;
+  }
+  .capsule--main {
+    width: 130px;
+    height: 190px;
+    left: 15px;
+  }
+  .capsule--sub {
+    width: 90px;
+    height: 140px;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .section-header h2,
+  .sobre-content h2,
+  .agenda-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .badge-tag {
+    font-size: 0.65rem;
+    padding: 5px 12px;
+  }
+
+  .nav__right .btn-pill {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  .header .nav__logo-img {
+    height: 50px;
+    margin-left: -8px;
+  }
+  .nav {
+    height: 64px;
+  }
+  .nav__links.open {
+    top: 64px;
+    left: 8px;
+    right: 8px;
+  }
+
+  .sobre-content p {
+    font-size: 0.85rem;
+  }
+
+  .ticket-card {
+    padding: 24px 20px;
+  }
+  .ticket-card__price {
+    font-size: 1.8rem;
+  }
+  .ticket-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer__col h5 {
+    font-size: 0.8rem;
+  }
+  .footer__col a {
+    font-size: 0.8rem;
+  }
+
+  .agenda-tab {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .speaker-card__img {
+    height: 220px;
+  }
+  .speaker-card__details h4 {
+    font-size: 1rem;
+  }
+}
