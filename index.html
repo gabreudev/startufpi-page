@@ -303,105 +303,85 @@
           
           <!-- TIMELINE CONTEÚDO (Dia 1 ativo) -->
           <div class="timeline" id="timeline-container">
-            <!-- Os eventos da timeline serão alternados via JS -->
-            <div class="timeline-item active">
-              <div class="timeline-time">14/07 - 22/08</div>
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h4>Inscrições & Submissão</h4>
-                <p>Formação de equipes e envio das propostas de ideias alinhadas aos ODS.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-time">25/08 - 29/08</div>
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h4>Homologação das Inscrições</h4>
-                <p>Banca realiza triagem técnica e documentacional das equipes cadastradas.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-time">Setembro</div>
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h4>Resultado dos Classificados</h4>
-                <p>Publicação oficial das equipes selecionadas para a fase de aceleração.</p>
-              </div>
-            </div>
+            <!-- Os eventos da timeline são gerados dinamicamente via JS -->
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO 5: TICKETS (TICKETS / PREMIAÇÃO) -->
+  <!-- SEÇÃO 5: TICKETS (PREMIAÇÃO) -->
   <section id="premios">
     <div class="container">
       <div class="section-header">
         <div class="badge-tag">Premiação</div>
-        <h2>Categorias & Prêmios</h2>
+        <h2>Bolsas & Prêmios</h2>
+        <p class="section-header__sub">
+          Todos os participantes do Desafio StartUFPI terão <strong>certificado de participação</strong>.
+          Os três primeiros lugares receberão bolsas por 12 meses + taxa de bancada, conforme abaixo:
+        </p>
       </div>
       <div class="tickets-grid">
-        <!-- Categoria 1 -->
+        <!-- 3º Lugar -->
         <div class="ticket-card">
+          <div class="ticket-card__badge">Bronze</div>
           <h3>3º Lugar</h3>
-          <div class="ticket-card__price">R$ 2.000</div>
+          <div class="ticket-card__price">
+            Bolsa 12 meses<br>
+            <small>• Coordenador: R$ 1.100/mês</small>
+            <small>• Discentes: R$ 700/mês</small>
+          </div>
           <div class="ticket-card__features">
             <div class="ticket-card__feature">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Mentoria de Negócios
+              <strong>R$ 5.000</strong> — Taxa de Bancada
             </div>
             <div class="ticket-card__feature">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Certificado de Destaque
-            </div>
-            <div class="ticket-card__feature">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Suporte para Patentes
+              Certificado de Participação
             </div>
           </div>
           <a href="https://forms.gle/cpAK4ZdNrELUDbUH7" target="_blank" class="btn-pill btn-pill--outline">Quero Competir</a>
         </div>
-        <!-- Categoria 2 (Mais Destacado) -->
+        <!-- 1º Lugar (VIP/Destaque) -->
         <div class="ticket-card ticket-card--vip">
+          <div class="ticket-card__badge">Ouro</div>
           <h3>1º Lugar</h3>
-          <div class="ticket-card__price">R$ 5.000</div>
+          <div class="ticket-card__price">
+            Bolsa 12 meses<br>
+            <small>• Coordenador: R$ 1.100/mês</small>
+            <small>• Discentes: R$ 700/mês</small>
+
+          </div>
           <div class="ticket-card__features">
             <div class="ticket-card__feature">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Bolsa de Fomento PROPESQI
+              <strong>R$ 15.000</strong> — Taxa de Bancada
             </div>
             <div class="ticket-card__feature">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Incubação Direta na LINC/UFPI
-            </div>
-            <div class="ticket-card__feature">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Mentoria com Especialistas
-            </div>
-            <div class="ticket-card__feature">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Apoio de Protótipo Físico
+              Certificado de Participação
             </div>
           </div>
           <a href="https://forms.gle/cpAK4ZdNrELUDbUH7" target="_blank" class="btn-pill btn-pill--primary">Quero o Ouro</a>
         </div>
-        <!-- Categoria 3 -->
+        <!-- 2º Lugar -->
         <div class="ticket-card">
+          <div class="ticket-card__badge">Prata</div>
           <h3>2º Lugar</h3>
-          <div class="ticket-card__price">R$ 3.000</div>
+          <div class="ticket-card__price">
+            Bolsa 12 meses<br>
+            <small>• Coordenador: R$ 1.100/mês</small>
+            <small>• Discentes: R$ 700/mês</small>
+          </div>
           <div class="ticket-card__features">
             <div class="ticket-card__feature">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Mentoria de Negócios & Pitch
+              <strong>R$ 10.000</strong> — Taxa de Bancada
             </div>
             <div class="ticket-card__feature">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Pré-Incubação na LINC
-            </div>
-            <div class="ticket-card__feature">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              Certificação Especial
+              Certificado de Participação
             </div>
           </div>
           <a href="https://forms.gle/cpAK4ZdNrELUDbUH7" target="_blank" class="btn-pill btn-pill--outline">Quero Competir</a>

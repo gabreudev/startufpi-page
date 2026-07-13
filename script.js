@@ -63,22 +63,21 @@ if (hamburger && navLinks) {
   });
 }
 
-// Timeline Data for Day Swapping
+// Timeline Data (formato enxuto, datas corretas)
 const timelineData = {
   day1: [
-    { time: '14/07 - 22/08', title: 'Inscrições & Submissão', desc: 'Formação de equipes e envio das propostas de ideias alinhadas aos ODS.' },
-    { time: '25/08 - 29/08', title: 'Homologação das Inscrições', desc: 'Banca realiza triagem técnica e documentacional das equipes cadastradas.' },
-    { time: 'Setembro', title: 'Resultado dos Classificados', desc: 'Publicação oficial das equipes selecionadas para a fase de aceleração.' }
+    { time: '04/05 - 15/07', title: 'Submissão das Propostas', desc: 'Prazo para envio das propostas de ideias alinhadas aos ODS.' },
+    { time: '05/08', title: 'Homologação das Inscrições', desc: 'Resultado da homologação das equipes inscritas.' },
+    { time: '11/08', title: 'Resultado Final da Homologação', desc: 'Homologação definitiva após análise dos recursos.' }
   ],
   day2: [
-    { time: 'Outubro', title: 'Imersão & Mentorias Individuais', desc: 'Acompanhamento direto para ajustes de proposta de valor e mercado.' },
-    { time: 'Novembro', title: 'Apoio de Protótipo', desc: 'Sessões práticas para desenvolvimento físico ou digital da solução.' },
-    { time: '20/11', title: 'Submissão de Protótipo e Relatório', desc: 'Entrega final da validação do produto mínimo viável (MVP).' }
+    { time: '25/08', title: 'Resultado Preliminar da 1ª Etapa', desc: 'Publicação do resultado preliminar da primeira etapa.' },
+    { time: '26/08 - 27/08', title: 'Recursos da 1ª Etapa', desc: 'Prazo para interposição de recursos contra o resultado.' },
+    { time: '28/08', title: 'Resultado Final da 1ª Etapa', desc: 'Publicação do resultado final com os classificados.' }
   ],
   day3: [
-    { time: '01/12 - 05/12', title: 'Pré-Pitch e Ajustes Finos', desc: 'Apresentações simuladas com feedbacks dos especialistas convidados.' },
-    { time: 'Dezembro', title: 'Demoday & Pitch Final', desc: 'Grande apresentação para a banca avaliadora com investidores do PI.' },
-    { time: 'Dezembro', title: 'Resultado e Premiação', desc: 'Anúncio dos três primeiros lugares e entrega das bolsas correspondentes.' }
+    { time: '11/09 • 16/09', title: 'Mentoria ', desc: 'Oficina de pitches e mentoria presencial.' },
+    { time: '17/09 - 18/09', title: 'Evento StartUFPI', desc: 'Apresentação dos projetos e cerimônia de premiação.' }
   ]
 };
 
@@ -98,6 +97,9 @@ if (timelineContainer && tabs.length > 0) {
       renderTimeline(day);
     });
   });
+  
+  // Render Fase 1 (day1) on initial page load
+  renderTimeline('day1');
 }
 
 function renderTimeline(dayKey) {

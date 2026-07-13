@@ -473,6 +473,19 @@ section {
   font-weight: 600;
 }
 
+.section-header__sub {
+  max-width: 600px;
+  margin: 16px auto 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.section-header__sub strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 /* ========== SOBRE (SECTION 2) ========== */
 .sobre-grid {
   display: grid;
@@ -804,6 +817,27 @@ section {
   background: rgba(163, 230, 85, 0.02);
 }
 
+.ticket-card__badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.ticket-card--vip .ticket-card__badge {
+  background: rgba(163, 230, 85, 0.1);
+  border-color: rgba(163, 230, 85, 0.25);
+  color: var(--lime);
+}
+
 .ticket-card h3 {
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -814,10 +848,19 @@ section {
 
 .ticket-card__price {
   font-family: var(--font-heading);
-  font-size: 2.75rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--lime);
   margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.ticket-card__price small {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 4px;
 }
 
 .ticket-card__features {
