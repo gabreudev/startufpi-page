@@ -256,6 +256,30 @@ body {
   border-color: var(--text-primary);
 }
 
+.btn-pill--ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+}
+
+.btn-pill--ghost:hover {
+  color: var(--text-secondary);
+}
+
+.hero__actions-secondary {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .hero__actions-secondary {
+    justify-content: center;
+  }
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
