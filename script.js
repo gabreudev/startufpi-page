@@ -80,8 +80,8 @@ const timelineData = {
     { time: '17:30h', title: 'Coffee-break', desc: 'Intervalo para descanso e conversa entre participantes.' }
   ],
   'day2-morning': [
-    { time: '10:00h', title: 'ALI Academy', desc: 'Atividade conduzida por Helder. Responsável: Sebrae.' },
-    { time: '11:00h', title: 'CREA e Mútua Piauí', desc: 'Atividade institucional a ser definida pela organização.' }
+    { time: '10:00h', title: 'ALI Academy', desc: 'Responsável: Sebrae.' },
+    { time: '11:00h', title: 'CREA e Mútua Piauí', desc: 'Atividade com CREA e Mútua Piauí.' }
   ],
   'day2-afternoon': [
     { time: '14:00h - 16:00h', title: 'Apresentação das Equipes Finalistas', desc: 'Apresentação das equipes finalistas do Desafio StartUFPI 2026.' },
@@ -108,8 +108,8 @@ if (timelineContainer && tabs.length > 0) {
     });
   });
   
-  // Render Fase 1 (day1) on initial page load
-  renderTimeline('day1');
+  // Render the first visible schedule on initial page load
+  renderTimeline('day1-morning');
 }
 
 function renderTimeline(dayKey) {
