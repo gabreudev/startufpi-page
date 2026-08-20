@@ -639,6 +639,10 @@ section {
   transform: scale(1.05);
 }
 
+.speaker-card--no-zoom:hover .speaker-card__img img {
+  transform: none;
+}
+
 .speaker-card__info {
   padding: 20px;
   display: flex;
