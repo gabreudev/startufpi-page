@@ -743,15 +743,20 @@ section {
   border-radius: var(--radius-pill);
   font-family: var(--font-heading);
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-secondary);
   cursor: pointer;
   transition: var(--transition);
 }
 
+.agenda-tab:hover {
+  color: var(--text-primary);
+}
+
 .agenda-tab.active {
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   color: #fff;
+  box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35);
 }
 
 .timeline {
@@ -1577,9 +1582,6 @@ section {
   .agenda-left p {
     max-width: 100%;
   }
-  .agenda-left__img {
-    display: none;
-  }
   .agenda-tabs {
     width: 100%;
     justify-content: center;
@@ -1587,6 +1589,7 @@ section {
   }
   .agenda-tab {
     flex: 1;
+    justify-content: center;
     text-align: center;
     padding: 10px 12px;
     font-size: 0.8rem;

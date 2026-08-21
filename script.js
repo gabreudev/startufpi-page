@@ -63,27 +63,23 @@ if (hamburger && navLinks) {
   });
 }
 
-// Timeline Data (cronograma oficial do evento)
+// Timeline Data (cronograma oficial do evento por dia completo)
 const timelineData = {
-  'day1-morning': [
+  'day1': [
     { time: '08:00h', title: 'Credenciamento', desc: 'Recepção e confirmação de presença dos participantes.' },
     { time: '08:40h', title: 'Apresentação Cultural', desc: 'Abertura artística e acolhimento do público.' },
     { time: '09:00h', title: 'Abertura oficial', desc: 'Boas-vindas e contextualização do Desafio StartUFPI.' },
     { time: '09:30h', title: 'Palestra de Abertura', desc: 'A propriedade intelectual como ferramenta de desenvolvimento científico e tecnológico. Palestrante: Prof. Dr. Marcelo Gomes Speziali (UFOP).' },
-    { time: '10:30h', title: 'Mesa Redonda', desc: 'Cases de sucesso com Buriti Bioespuma, Ricardo Lira (IAgro Solutions), Lívio e Otílio (IFPI). Mediação: Profa. Dra. Valdivânia Albuquerque.' }
-  ],
-  'day1-afternoon': [
+    { time: '10:30h', title: 'Mesa Redonda', desc: 'Cases de sucesso com Buriti Bioespuma, Ricardo Lira (IAgro Solutions), Lívio e Otílio (IFPI). Mediação: Profa. Dra. Valdivânia Albuquerque.' },
     { time: '12:00h', title: 'Almoço livre', desc: 'Intervalo para almoço e networking informal.' },
     { time: '14:30h', title: 'Palestra: Inovação e Sustentabilidade', desc: 'Experiência da incubadora socioambiental da UFSM. Palestrante: Prof. Dr. Lucas Veiga Ávila (UFSM).' },
     { time: '15:30h', title: 'Painel Transferência de Tecnologia', desc: 'Participação de Juliana (UFBA) e Profa. Maíra (ANPROTEC). Mediação: Anderson Soares.' },
     { time: '17:00h', title: 'Feira das Startups', desc: 'Networking e apresentação de iniciativas inovadoras.' },
     { time: '17:30h', title: 'Coffee-break', desc: 'Intervalo para descanso e conversa entre participantes.' }
   ],
-  'day2-morning': [
+  'day2': [
     { time: '10:00h', title: 'ALI Academy', desc: 'Responsável: Sebrae.' },
-    { time: '11:00h', title: 'CREA e Mútua Piauí', desc: 'Atividade com CREA e Mútua Piauí.' }
-  ],
-  'day2-afternoon': [
+    { time: '11:00h', title: 'CREA e Mútua Piauí', desc: 'Atividade com CREA e Mútua Piauí.' },
     { time: '14:00h - 16:00h', title: 'Apresentação das Equipes Finalistas', desc: 'Apresentação das equipes finalistas do Desafio StartUFPI 2026.' },
     { time: '16:00h - 16:30h', title: 'Apresentação das Equipes Vencedoras do StartUFPI 2025', desc: 'Ecoshield, Vector Trackers e EcoMadeira.' },
     { time: '16:30h', title: 'Palestra: Inovação na prática', desc: 'Paulo Coutinho aborda ideias, conexões e impacto no ecossistema empreendedor.' },
@@ -93,31 +89,33 @@ const timelineData = {
 
 // Timeline switcher
 const timelineContainer = document.getElementById('timeline-container');
-const tabs = document.querySelectorAll('.agenda-tab');
+const dayTabs = document.querySelectorAll('.agenda-tab');
 
-if (timelineContainer && tabs.length > 0) {
-  tabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-      // Remove active from all tabs
-      tabs.forEach(t => t.classList.remove('active'));
-      // Add active to current tab
-      tab.classList.add('active');
-      
-      const day = tab.getAttribute('data-day');
-      renderTimeline(day);
+let activeDay = 'day1';
+
+function setupTimelineEvents() {
+  if (dayTabs.length > 0) {
+    dayTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        dayTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        activeDay = tab.getAttribute('data-day');
+        renderTimeline(activeDay);
+      });
     });
-  });
-  
-  // Render the first visible schedule on initial page load
-  renderTimeline('day1-morning');
+  }
+
+  // Render initial timeline
+  renderTimeline(activeDay);
 }
 
 function renderTimeline(dayKey) {
   if (!timelineContainer || !timelineData[dayKey]) return;
   
   timelineContainer.innerHTML = '';
+  const events = timelineData[dayKey];
   
-  timelineData[dayKey].forEach((item, index) => {
+  events.forEach((item, index) => {
     const activeClass = index === 0 ? 'active' : '';
     const itemHTML = `
       <div class="timeline-item ${activeClass}">
@@ -141,6 +139,8 @@ function renderTimeline(dayKey) {
     });
   });
 }
+
+setupTimelineEvents();
 
 // Initial active state behavior for timeline items
 const items = document.querySelectorAll('.timeline-item');
