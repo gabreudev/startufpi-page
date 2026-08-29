@@ -655,6 +655,10 @@ section {
   object-position: center 18%;
 }
 
+.speaker-card__img--joan img {
+  object-position: center 12%;
+}
+
 .speaker-card__info {
   padding: 20px;
   display: flex;
