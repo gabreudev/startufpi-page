@@ -644,7 +644,11 @@ section {
 }
 
 .speaker-card__img--lorena img {
-  object-position: center top;
+  object-position: center 15%;
+}
+
+.speaker-card:hover .speaker-card__img--lorena img {
+  transform: scale(1.02);
 }
 
 .speaker-card__img--heitor img {
