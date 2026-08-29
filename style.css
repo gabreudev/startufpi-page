@@ -643,6 +643,14 @@ section {
   transform: none;
 }
 
+.speaker-card__img--lorena img {
+  object-position: center top;
+}
+
+.speaker-card__img--heitor img {
+  object-position: center 18%;
+}
+
 .speaker-card__info {
   padding: 20px;
   display: flex;
