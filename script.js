@@ -68,7 +68,7 @@ const timelineData = {
   'day1': [
     { time: '08:00h', title: 'Credenciamento', desc: 'Recepção e confirmação de presença dos participantes.' },
     { time: '08:40h', title: 'Apresentação Cultural', desc: 'Abertura artística e acolhimento do público.' },
-    { time: '09:00h', title: 'Abertura oficial', desc: 'Boas-vindas e contextualização do Desafio StartUFPI.' },
+    { time: '09:00h', title: 'Abertura oficial', desc: 'Boas-vindas e contextualização do Desafio StartUFPI com a Profa. Dra. Nayara Cardoso.' },
     { time: '09:30h', title: 'Palestra de Abertura', desc: 'A propriedade intelectual como ferramenta de desenvolvimento científico e tecnológico. Palestrante: Prof. Dr. Marcelo Gomes Speziali (UFOP).' },
     { time: '10:30h', title: 'Mesa Redonda', desc: 'Cases de sucesso com Buriti Bioespuma, Ricardo Lira (IAgro Solutions), Lívio e Otílio (IFPI). Mediação: Profa. Dra. Valdivânia Albuquerque.' },
     { time: '12:00h', title: 'Almoço livre', desc: 'Intervalo para almoço e networking informal.' },
