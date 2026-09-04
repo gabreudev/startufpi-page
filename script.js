@@ -285,6 +285,28 @@ class Carousel {
     // Pause on hover
     this.viewport?.addEventListener('mouseenter', () => this.stopAutoPlay());
     this.viewport?.addEventListener('mouseleave', () => this.startAutoPlay());
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    this.viewport?.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      this.stopAutoPlay();
+    }, { passive: true });
+
+    this.viewport?.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          this.next();
+        } else {
+          this.prev();
+        }
+      }
+      this.startAutoPlay();
+    }, { passive: true });
   }
   
   startAutoPlay() {
@@ -305,7 +327,14 @@ class Carousel {
   }
 }
 
-// Initialize the innovation agents carousel
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize carousels
+function initCarousels() {
+  new Carousel('coordenacaoViewport', 'coordenacaoTrack', 'coordenacaoPrev', 'coordenacaoNext', 'coordenacaoDots');
   new Carousel('inovacaoViewport', 'inovacaoTrack', 'inovacaoPrev', 'inovacaoNext', 'inovacaoDots');
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCarousels);
+} else {
+  initCarousels();
+}
